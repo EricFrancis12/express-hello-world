@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "nodemon --watch . server.js",
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "cd build && node build && cd ../"
   },
   "repository": {
     "type": "git",
