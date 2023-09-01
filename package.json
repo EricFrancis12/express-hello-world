@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "nodemon --watch . server.js",
     "start": "node server.js",
-    "build": "cd build && node build && cd ../"
+    "build": "cd scripts && node build && cd ../"
   },
   "repository": {
     "type": "git",
