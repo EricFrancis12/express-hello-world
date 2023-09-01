@@ -1,12 +1,12 @@
-const express = require('express')
+const express = require('express');
 const path = require("path");
-const app = express()
+const app = express();
 
 // #############################################################################
 // Logs all request paths and method
 app.use(function (req, res, next) {
-  res.set('x-timestamp', Date.now())
-  res.set('x-powered-by', 'cyclic.sh')
+  res.set('x-timestamp', Date.now());
+  res.set('x-powered-by', 'cyclic.sh');
   console.log(`[${new Date().toISOString()}] ${req.ip} ${req.method} ${req.path}`);
   next();
 });
@@ -21,8 +21,8 @@ var options = {
   index: ['index.html'],
   maxAge: '1m',
   redirect: false
-}
-app.use(express.static('public', options))
+};
+app.use(express.static('public', options));
 
 // #############################################################################
 // Catch all handler for all other request.
@@ -38,6 +38,6 @@ app.use('*', (req,res) => {
       params: req.params
     })
     .end()
-})
+});
 
-module.exports = app
+module.exports = app;
