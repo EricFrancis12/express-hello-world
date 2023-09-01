@@ -5,8 +5,9 @@
   "main": "server.js",
   "scripts": {
     "serve": "nodemon --watch . server.js",
-    "start": "node server.js",
-    "build": "cd scripts && node build && cd ../"
+    "preinstall": "cd scripts && node preinstall && cd ../",
+    "build": "cd scripts && node build && cd ../",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
